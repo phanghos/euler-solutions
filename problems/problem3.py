@@ -1,8 +1,12 @@
+# largest prime factor must be <= sqrt(n)
+# n is a sqrt(n)-smooth number (not a sqrt(n)-rough number)
+# http://mathworld.wolfram.com/GreatestPrimeFactor.html
+
+# Sieve of Eratosthenes
 def sieve(n):
 	end = int(n ** .5)
 	l = [True for i in range(n + 1)]
-	l[0] = l[1] = False
-	for i in range(2, end + 1):
+	for i in range(3, end + 1, 2): # only sieving out odd numbers since there's no need to test for primality of even numbers
 		if l[i]:
 			for j in range(i * i, n + 1, i):
 				l[j] = False
