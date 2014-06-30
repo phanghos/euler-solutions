@@ -37,7 +37,7 @@ def rotate(n, f):
 def circular_prime(n):
 	d = digits(n)
 	f = 10 ** (d - 1)
-	for i in range(d):
+	for i in range(d - 1):
 		n = rotate(n, f)
 		if not primes[n]:
 			return False
