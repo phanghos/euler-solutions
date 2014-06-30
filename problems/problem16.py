@@ -1,5 +1,3 @@
-import timeit
-
 def sum_digits(n):
 	s = 0
 	while n > 0:
