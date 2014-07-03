@@ -10,7 +10,6 @@ def sum_divisors(n):
 			if n % d == 0:
 				s += d
 			d += 1
-	
 	return s
 	
 def amicable(u, v):
@@ -18,8 +17,7 @@ def amicable(u, v):
 
 def sum_amic_under(n):
 	amic = []
-	s = 0
-	i = 220
+	i, s = 220, 0
 	while i < n:
 		div_sum = sum_divisors(i)
 		if amicable(i, div_sum) and i != div_sum:
@@ -30,8 +28,7 @@ def sum_amic_under(n):
 			else:
 				i += 1
 		else:
-			i += 1
-			
+			i += 1			
 	return s
 	
 print(sum_amic_under(10000))

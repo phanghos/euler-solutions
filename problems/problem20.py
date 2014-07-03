@@ -1,8 +1,7 @@
 def factorial(n):
 	f = 1
 	for i in range(n, 1, -1):
-		f *= i
-		
+		f *= i	
 	return f
 	
 def sum_digits(n):
@@ -11,7 +10,6 @@ def sum_digits(n):
 		div = n // 10
 		s += n - div * 10
 		n = div
-		
 	return s
 	
 print(sum_digits(factorial(100)))
